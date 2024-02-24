@@ -1,0 +1,736 @@
+@media screen and (max-device-width: 850px) {
+    .wrapper{
+        display: none;
+    }
+    .container {
+        height: 100%;
+        position: relative;
+      }
+    .mobile{
+        height: 100%;
+        display: inline!important;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left:20%;
+    }
+}
+html{
+    font-size: 16px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    color: #000;
+    font-family: Roboto,sans-serif;
+    font-weight: 550;
+    background: #fff;
+}
+
+body{
+    overflow: hidden;
+}
+.body{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+.upper_div{
+    /* border: 1px solid red; */
+    position: relative;
+    top: 0;
+    left: 50%;
+    height: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%);
+    background: #fff;
+    z-index: 999;
+    box-shadow: 0 0 15px 20px #fff;
+    pointer-events: none;
+    width: 100%;
+    position: fixed;
+    /* border: none; */
+}
+.lower_div{
+    /* border: 1px solid blue; */
+    height: 50%;
+    max-height: 70px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: auto;
+    padding: 50vh 15px calc(50vh - 150px);
+}
+.lower_div::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .lower_div {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .current-line{
+    opacity: 1 !important;
+    transition: opacity .7s !important;
+}
+.line{
+    font-size: 23px;
+    text-align: left;
+    line-height: 1.5em;
+    margin-bottom: 120px;
+    opacity: .3;
+    transition: opacity .2s;
+}
+.wrapper{
+    background: #fff;
+}
+.bottom-fade {
+    bottom: 0;
+    transform: translateY(-20px);
+    box-shadow: 0 -15px 100px 100px #fff;
+}
+.graphic-view{
+    display:block!important;
+}
+.zindexSet{
+    z-index: 10;
+    display:block!important;
+}
+.calander{
+    width: 175px;
+    height: 175px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: 50px 100px 25px;
+}
+.calander-top {
+    height: 25%;
+    background: #ee5253;
+    color: #fff;
+    text-align: center;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.day{
+    height: 60%;
+    font-size: 64px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calander-bottom{
+    text-align: center;
+    font-size: 16px;
+}
+.baby{
+    max-width: 150px;
+    animation: babyAnim 2.5s linear infinite alternate;
+    transform-origin: 50% 50%;
+}
+@keyframes babyAnim {
+    0%{transform: rotate(-3deg);}
+    100%{transform: rotate(3deg);}
+}
+.heartbeat{
+    width: 150px;
+    animation: heartbeat .38s infinite alternate;
+    display: block;
+    margin-bottom: 15px;
+}
+@keyframes heartbeat {
+   0%{transform: scale(1);}
+   100%{transform: scale(.75);}
+}
+.blood-cell{
+    width: 65px;
+    position: relative;
+    margin-left: 12px;
+    margin-right: 12px;
+    animation: bloodCell 1.5s ease-in-out infinite alternate;
+}
+@keyframes bloodCell {
+    100%{transform: scale(0);}
+}
+.breath-holder{
+    display: grid;
+}
+.breath{
+    stroke-dasharray: 80;
+    animation: dash 400s linear infinite forwards;
+    width: 100%;
+    transform: scale(1.5);
+}
+@keyframes dash {
+    100%{stroke-dashoffset:100000;}
+}
+.static-image{
+    width: 100%;
+    max-width: 150px;
+    position: relative;
+    z-index: 2;
+}
+.z{
+    width: 100%;
+    height: 20px;
+    background-image: url(images/z.svg);
+    background-size: 40px 20px;
+    animation: zs 1s linear infinite;
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+}
+@keyframes zs{
+    0% {background-position: 0 20px;}
+    100% {background-position: -40px 20px;}
+}
+.earth, .hand-holding{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.hand-holding{
+    bottom: 0;
+    max-width: 250px;
+}
+.earth{
+    bottom: 100px;
+    max-width: 150px;
+    animation: earthhover 2s ease-in-out infinite alternate;
+}
+@keyframes earthhover {
+    100% {transform: translateX(-50%) translateY(-10px);}
+}
+.humans{
+    width: 100%;
+    height: 100%;
+    background-image: url(images/people.png);
+    background-size: 150px 106px;
+    animation: humans 2.5s linear infinite;
+}
+
+@keyframes humans {
+    0% {background-position: 0 0;}
+    100% {background-position: -150px 0;}
+}
+.chimney, .smoke {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.chimney{
+    width: 100px;
+    z-index: 9;
+}
+.smoke {
+    width: 80px;
+    height: 100%;
+    background: url(images/smoke.svg),url(images/smoke.svg);
+    background-position: 0 0,0 200px;
+    animation: smoke 16s linear infinite forwards;
+}
+.smoke-opacity{
+    width: 100%;
+    box-shadow: 0 0 150px 150px #fff;
+    position: absolute;
+    top: 0;
+    z-index: 99;
+}
+@keyframes smoke {
+    100% {background-position: 0 -1000px,0 -800px;}
+}
+.inflation-wrapper{
+    padding: 0 10px;
+}
+.inflation-top {
+    text-align: center;
+}
+.equal-sign{
+    max-width: 40px;
+    display: block;
+    margin: 10px auto;
+}
+.dollar{
+    max-width: 170px;
+}
+.quarter {
+    max-width: 70px;
+}
+.nickel{
+    max-width: 60px;
+}
+.penny {
+    max-width: 40px;
+}
+.sp500{
+    width: 100%;
+    height: 100%;
+    background-image: url(images/S&P.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+.skateboard{
+    max-width: 150px;
+    animation: skate 2.5s ease-in-out infinite alternate;
+}
+@keyframes skate {
+    0% { transform: rotate(0deg) translateX(-10px);}
+    100% {transform: rotate(9deg) translateX(15px);}
+}
+.space-background{
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+.orbit-radius{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    border: 2px dashed #fff;
+}
+.orbit{
+    width: 50px;
+    height: 50px;
+    animation: orbitAnim 16s linear infinite;
+}
+.sun {
+    max-width: 75px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+@keyframes orbitAnim {
+    0% {transform: rotate(0deg) translateX(125px) rotate(0deg);}
+    100% {transform: rotate(1turn) translateX(125px) rotate(-1turn);}
+}
+.galaxy{
+    max-width: 200px;
+    animation: galaxy 30s linear infinite;
+}
+@keyframes galaxy{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(1turn);}
+}
+.moon{
+    width: 100%;
+    max-width: 150px;
+    animation: moonhover 3s ease-in-out infinite alternate;
+}
+@keyframes moonhover {
+    00% {transform: scale(.8);}
+}
+.city {
+    max-width: 200px;
+    bottom: 27px;
+}
+.road{
+    height: 25px;
+    width: 100%;
+    background: grey;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: 2px dashed #ff0;
+}
+.cars {
+    position: absolute;
+    height: 90px;
+    bottom: -15px;
+    right: -90px;
+    animation: carmove 8s linear infinite;
+    z-index: 9;
+}
+@keyframes carmove {
+    100% {transform: translateX(-200vw);}
+}
+.page-flip {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 85px;
+    height: 132px;
+    animation: flip 1s infinite;
+    transform-origin: 0 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+.book {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    max-width: 170px;
+    border-color: #ff6b6b;
+    border-style: solid;
+    border-width: 4px 2px;
+    border-radius: 5px;
+    transform: translate(-50%,-50%);
+}
+@keyframes flip {
+    100% {transform: translateY(-50%) rotateY(180deg);}
+}
+
+.clouds {
+    width: 100%;
+    height: 100px;
+    background: url(images/cloud.svg);
+    background-repeat: repeat,no-repeat;
+    background-size: 350px 100px;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    animation: cloudmove 12s linear infinite forwards;
+}
+.old-people {
+    max-width: 190px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+}
+@keyframes cloudmove {
+    100% {background-position: -350px 0; }
+    
+}
+.light-bulb {
+    width: 100%;
+    max-width: 100px;
+    position: relative;
+    z-index: 9;
+}
+.light {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    box-shadow: 0 0 40px 15px #ffe5b0, 0 0 30px 20px #feca57;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,calc(-50% - 30px));
+    animation: flicker 1.5s ease-in-out infinite alternate;
+}
+@keyframes flicker {
+    100% {box-shadow: 0 0 80px 50px #ffe5b0, 0 0 50px 35px #feca57;}
+}
+.four-leaf{
+    max-width: 150px;
+    animation: cloverspin 20s linear infinite;
+    position: relative;
+    z-index: 9;
+}
+.four-leaf-stem{
+    width: 14px;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 7px);
+    background: #55d47b;
+}
+@keyframes cloverspin {
+    100% {transform: rotate(1turn);}
+}
+.flying-car{
+    width: 200px;
+    animation: flying 1.5s ease-in-out infinite alternate;
+}
+@keyframes flying {
+    100% {transform: translateY(-15px);}
+}
+.audi-car{
+    width: 400px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+.slider img {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.slider img.active {
+    opacity: 1;
+}
+
+.confetti{
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    user-select: none;
+ }
+ 
+ body
+ {
+       cursor: pointer;
+       background-color: #fff;
+ }
+ .name
+ {
+      font-weight: 900;
+     text-transform: uppercase;
+     padding: 36px;
+     position: absolute;
+     left: 0;
+     right: 0;
+     text-align: center;
+     top: 37%;
+     color: rebeccapurple;
+     font-family: 'Righteous', cursive;
+     font-size: 93px;
+     letter-spacing: 10px;
+     text-shadow: 2px 4px 11px rgb(0 0 0 / 28%);
+       -webkit-text-stroke-width: 1px;
+     -webkit-text-stroke-color: white;
+ }
+
+ .body1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    transform: translate(0,60%);
+    z-index: 20;
+  }
+  
+  .birthday-gift {
+    position: relative;
+  }
+  
+  .birthday-gift:before {
+    content:"";
+    position: absolute;
+    width: 170px;
+    height:20px;
+    border-radius:50%;
+    background-color: rgba(0,0,0,0.4);
+    top:90px;
+    left:-10px;
+  }
+  
+  input#click {
+    display: none;
+  }
+  
+  .gift {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    background-color: #e9c46a;
+  }
+  
+  .gift:before {
+    content:"";
+    position: absolute;
+    width: 25px;
+    height: 100px;
+    background-color: #e76f51;
+    left:62px;
+  }
+  
+  .gift:after {
+    content:"";
+    position: absolute;
+    box-shadow: inset 0 10px rgba(0,0,0,0.3);
+    width: 150px;
+    height: 100px;
+  }
+  
+  .click {
+    position: absolute;
+    background-color: #e9c46a;
+    width: 170px;
+    height: 40px;
+    top:-40px;
+    left:-10px;
+    transform-origin: bottom left;
+    transition: .3s;
+    cursor: pointer;
+  }
+  
+  .click:before {
+    content:"";
+    position: absolute;
+    width: 25px;
+    height: 40px;
+    background-color: #e76f51;
+    left:69px;
+  }
+  
+  .click:after {
+    content:"";
+    position: absolute;
+    width: 5px;
+    height: 0;
+    border-bottom: 30px solid #e76f51;
+    border-top: 30px solid #e76f51;
+    border-left: 0px solid transparent;
+    border-right: 30px solid transparent;
+    transform: rotate(-90deg);
+    left:65px;
+    top:-47px;
+  }
+  
+  #click:checked + .click {
+    transform: rotate(-110deg) scaleX(0.85);
+  }
+  
+  .wishes {
+    position: absolute;
+    transition: .5s;
+    color: #333;
+    font-size: 37px;
+    text-align: center;
+    z-index:-1;
+    left:5px;
+  }
+  
+  #click:checked ~ .wishes {
+    transform: translateY(-100px);
+  }
+  
+  #click:checked ~ .sparkles {
+    display: block;
+  }
+  
+  
+  
+  .sparkles {
+    position: absolute;
+    display: none;
+    top:-15px;
+    z-index:-2;
+    left:40px;
+  }
+  
+  .spark1, .spark2, .spark3, .spark4, .spark5, .spark6 {
+    position: absolute;
+    background-color: #fee440;
+    border-radius:50%;
+    top:-9px;
+    z-index:-1;
+  }
+  
+  .spark1 {
+    width: 8px;
+    height:8px;
+    left:30px;
+    top:-9px;
+    animation: fire 0.9s ease-in-out infinite, color 0.4s linear infinite;
+  }
+  
+  .spark1:before {
+    content:"";
+    position: absolute;
+    width:5px;
+    height:5px;
+    top:8px;
+    left:11px;
+    background-color: #fee440;
+    border-radius:50%;
+  }
+  
+  .spark2 {
+    width: 9px;
+    height:9px;
+    left:33px;
+    top:-5px;
+    animation: fire2 0.28s ease-in-out infinite, color 0.4s linear infinite;
+  }
+  
+  .spark2:before {
+    content:"";
+    position: absolute;
+    width:5px;
+    height:5px;
+    top:12px;
+    left:3px;
+    background-color: #fee440;
+    border-radius:50%;
+  }
+  
+  .spark3 {
+    width: 8.5px;
+    height:8.5px;
+    left:33px;
+    top:-5px;
+    animation: fire3 0.36s ease-in-out infinite, color2 0.4s linear infinite;
+  }
+  
+  .spark3:before {
+    content:"";
+    position: absolute;
+    width:5px;
+    height:5px;
+    top:12px;
+    left:-1px;
+    background-color: #fee440;
+    border-radius:50%;
+  }
+  
+  .spark4 {
+    width: 7px;
+    height:7px;
+    left:27px;
+    top:-5px;
+    animation: fire2 0.24s ease-in-out infinite, color2 0.2s linear infinite;
+  }
+  
+  .spark5 {
+    width: 7px;
+    height:7px;
+    left:29px;
+    top:-5px;
+    animation: fire3 0.45s ease-in-out infinite, color 0.2s linear infinite;
+  }
+  
+  .spark6 {
+    width: 6px;
+    height:6px;
+    left:29px;
+    top:-5px;
+    animation: fire 0.35s ease-in-out infinite, color2 0.2s linear infinite;
+  }
+    
+  @keyframes fire3 {
+    100% { transform:translateX(20px) translateY(-93px); 
+           opacity: 0.3; }
+  }
+  
+  @keyframes fire2 {
+    100% { transform:translateX(-5px) translateY(-90px); 
+           opacity: 0.3; }
+  }
+  
+  @keyframes fire {
+    100% { transform:translateX(-25px) translateY(-95px); 
+           opacity: 0.3; }
+  }
+  
+  @keyframes color {
+    from {background-color: #d00000;}
+    to {background-color: #0081a7;}
+  }
+  
+  @keyframes color2 {
+    from {background-color: #8cff00;}
+    to {background-color: #1d2d44;}
+  }
+  
